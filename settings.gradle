@@ -1,0 +1,8 @@
+rootProject.name = 'commerce'
+include 'order'
+include 'catalog'
+include 'user'
+
+project(":order").name = "commerce-order"
+project(":catalog").name = "commerce-catalog"
+project(":user").name = "commerce-user"
