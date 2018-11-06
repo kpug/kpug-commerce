@@ -1,11 +1,14 @@
 rootProject.name = 'commerce'
 include 'order'
-include 'catalog'
+include 'commerce-catalog'
 include 'user'
 include 'shipping'
+include 'infra-eureka'
 
 project(":order").name = "commerce-order"
-project(":catalog").name = "commerce-catalog"
+project(":commerce-catalog").name = "catalog"
 project(":user").name = "commerce-user"
 project(":shipping").name = "commerce-shipping"
+
+findProject(':infra-eureka')?.name = 'eureka'
 

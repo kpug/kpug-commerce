@@ -16,19 +16,22 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty
     private String name;
 
-    @NotEmpty
     private Integer price;
 
-    @NotEmpty
     private Integer count;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "catalog_id", nullable = false)
     private Catalog catalog;
+
+    public Product(final String name, final Integer price, final Integer count) {
+        this.name = name;
+        this.price = price;
+        this.count = count;
+    }
 }
