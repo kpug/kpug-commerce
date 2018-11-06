@@ -27,7 +27,7 @@ spring:
         trace: false
         web-allow-others: false
 #Eureka Client
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:9091/eureka/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka/

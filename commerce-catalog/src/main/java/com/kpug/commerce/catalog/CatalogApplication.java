@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.persistence.EntityManager;
 
 @SpringBootApplication
+
 public class CatalogApplication implements CommandLineRunner {
 
     public static void main(String[] args) {

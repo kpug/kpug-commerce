@@ -1,0 +1,12 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: eureka-server
+#Eureka Standalone Server
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
