@@ -4,15 +4,15 @@ include 'commerce-catalog'
 include 'user'
 include 'shipping'
 include 'infra-eureka'
+include 'infra-cloud-config'
+include 'infra-hystrix-dashboard'
 
 project(":order").name = "commerce-order"
-project(":commerce-catalog").name = "catalog"
+project(":commerce-catalog").name = "catalog-service"
 project(":user").name = "commerce-user"
 project(":shipping").name = "commerce-shipping"
 
-findProject(':infra-eureka')?.name = 'eureka'
-include 'infra-cloud-config'
-findProject(':infra-cloud-config')?.name = 'cloudconfig'
-include 'infra-hystrix-dashboard'
+findProject(':infra-eureka')?.name = 'eureka-service'
+findProject(':infra-cloud-config')?.name = 'config-service'
 findProject(':infra-hystrix-dashboard')?.name = 'hystrix-dashboard'
 

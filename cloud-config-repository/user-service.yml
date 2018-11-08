@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: development
+
+---
+spring:
+  profiles: development
+
+---
+spring:
+  profiles: production
