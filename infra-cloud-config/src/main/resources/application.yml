@@ -1,0 +1,10 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: cloud-config-server
+#Eureka Client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka/

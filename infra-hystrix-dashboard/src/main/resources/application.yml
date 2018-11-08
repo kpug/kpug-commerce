@@ -1,0 +1,12 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: hystrix-dashboard-server
+#Eureka Standalone Server
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/

@@ -11,4 +11,8 @@ project(":user").name = "commerce-user"
 project(":shipping").name = "commerce-shipping"
 
 findProject(':infra-eureka')?.name = 'eureka'
+include 'infra-cloud-config'
+findProject(':infra-cloud-config')?.name = 'cloudconfig'
+include 'infra-hystrix-dashboard'
+findProject(':infra-hystrix-dashboard')?.name = 'hystrix-dashboard'
 
