@@ -8,11 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 import javax.persistence.EntityManager;
 
 @SpringBootApplication
-
+@EnableEurekaClient
 public class CatalogApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
@@ -26,21 +27,21 @@ public class CatalogApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-        Catalog c1 = new Catalog("c1");
-        c1.addProduct(new Product("p1c1", 100, 100));
-        c1.addProduct(new Product("p2c1", 101, 101));
-        c1.addProduct(new Product("p3c1", 102, 102));
-        catalogRepository.save(c1);
-
-        Catalog c2 = new Catalog("c2");
-        c2.addProduct(new Product("p4c2", 103, 103));
-        c2.addProduct(new Product("p5c2", 104, 104));
-
-        Catalog c3 = new Catalog("c3");
-
-        catalogRepository.save(c2);
-        catalogRepository.save(c3);
+//
+//        Catalog c1 = new Catalog("c1");
+//        c1.addProduct(new Product("p1c1", 100, 100));
+//        c1.addProduct(new Product("p2c1", 101, 101));
+//        c1.addProduct(new Product("p3c1", 102, 102));
+//        catalogRepository.save(c1);
+//
+//        Catalog c2 = new Catalog("c2");
+//        c2.addProduct(new Product("p4c2", 103, 103));
+//        c2.addProduct(new Product("p5c2", 104, 104));
+//
+//        Catalog c3 = new Catalog("c3");
+//
+//        catalogRepository.save(c2);
+//        catalogRepository.save(c3);
 
 
 

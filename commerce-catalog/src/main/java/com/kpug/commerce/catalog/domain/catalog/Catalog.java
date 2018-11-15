@@ -1,5 +1,7 @@
 package com.kpug.commerce.catalog.domain.catalog;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kpug.commerce.catalog.domain.product.Product;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -26,6 +28,7 @@ public class Catalog {
     private String name;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "catalog", cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Product> products = new ArrayList<Product>();
 
     public void addProduct(final Product product) {

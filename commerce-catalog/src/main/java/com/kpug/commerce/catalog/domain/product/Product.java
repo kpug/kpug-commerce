@@ -1,5 +1,6 @@
 package com.kpug.commerce.catalog.domain.product;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kpug.commerce.catalog.domain.catalog.Catalog;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -27,6 +28,7 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "catalog_id", nullable = false)
+    @JsonManagedReference
     private Catalog catalog;
 
     public Product(final String name, final Integer price, final Integer count) {
