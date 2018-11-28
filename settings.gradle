@@ -1,18 +1,18 @@
 rootProject.name = 'commerce'
-include 'order'
+//include 'commerce-order'
 include 'commerce-catalog'
-include 'user'
-include 'shipping'
+include 'commerce-user'
+//include 'commerce-shipping'
 include 'infra-eureka'
-include 'infra-cloud-config'
-include 'infra-hystrix-dashboard'
+//include 'infra-cloud-config'
+//include 'infra-hystrix-dashboard'
 
-project(":order").name = "commerce-order"
+//project(":commerce-order").name = "order-service"
 project(":commerce-catalog").name = "catalog-service"
-project(":user").name = "commerce-user"
-project(":shipping").name = "commerce-shipping"
+project(":commerce-user").name = "user-service"
+//project(":commerce-shipping").name = "shipping-service"
 
 findProject(':infra-eureka')?.name = 'eureka-service'
-findProject(':infra-cloud-config')?.name = 'config-service'
-findProject(':infra-hystrix-dashboard')?.name = 'hystrix-dashboard'
+//findProject(':infra-cloud-config')?.name = 'config-service'
+//findProject(':infra-hystrix-dashboard')?.name = 'hystrix-dashboard'
 
