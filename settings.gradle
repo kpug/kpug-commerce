@@ -15,4 +15,6 @@ project(":commerce-user").name = "user-service"
 findProject(':infra-eureka')?.name = 'eureka-service'
 //findProject(':infra-cloud-config')?.name = 'config-service'
 //findProject(':infra-hystrix-dashboard')?.name = 'hystrix-dashboard'
+include 'commerce-auth'
+findProject(':commerce-auth')?.name = 'auth-service'
 
